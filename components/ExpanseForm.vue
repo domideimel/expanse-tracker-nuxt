@@ -11,7 +11,10 @@
       >
       <input v-model="amount" type="number" id="amount" placeholder="Enter amount..."/>
     </div>
-    <button class="btn">Add transaction</button>
+    <button
+      :disabled="text.length === 0 || amount === 0"
+      class="btn">Add transaction
+    </button>
   </form>
 </template>
 
